@@ -3,3 +3,5 @@ https://stackoverflow.com/questions/4178175/what-are-aggregates-and-pods-and-how
 
 MyArray<int,4> arr = {1,2,3,4};
 가 안됐던 이유 기술
+
+배열의 O(n)기술
