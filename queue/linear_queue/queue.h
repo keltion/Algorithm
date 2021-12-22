@@ -1,5 +1,6 @@
 #pragma once
 
+#include <array>
 #include <iostream>
 
 template<typename T, std::size_t N>
@@ -13,7 +14,7 @@ public:
     int size();
     bool empty();
 private:
-    T arr[N];
+    std::array<T,N> arr;
     int front_;
     int back_;
 };
