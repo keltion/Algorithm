@@ -20,23 +20,30 @@ private:
 };
 
 template<typename T, std::size_t N>
-queue<T, N>::queue() {
-    front_ = 0;
-    back_ = 0;
+queue<T, N>::queue(): front_{0}, back_{-1} {}
+
+template<typename T, std::size_t N>
+bool queue<T, N>::empty() {
+    return (back_ < front_) ? true : false;
 }
 
 template<typename T, std::size_t N>
 void queue<T, N>::push(T data) {
-    if(back_==N) {
+    if(back_== N-1) {
         std::cout << "ERROR: OVERFLOW!" << std::endl;
         exit(1);
     }
-    arr[back_] = data;
     back_++;
+    arr[back_] = data;
+
 }
 
 template<typename T, std::size_t N>
 void queue<T, N>::pop() {
+    if(empty()) {
+        std::cout << "There is no element!" << std::endl;
+        exit(1);
+    }
     front_++;
 }
 
@@ -52,10 +59,6 @@ T queue<T, N>::back() {
 
 template<typename T, std::size_t N>
 int queue<T, N>::size() {
-    return back_ - front_;
+    return back_ - front_ + 1;
 }
 
-template<typename T, std::size_t N>
-bool queue<T, N>::empty() {
-    return (back_ == front_) ? true : false; 
-}
