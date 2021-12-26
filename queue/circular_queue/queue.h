@@ -22,10 +22,7 @@ private:
 };
 
 template<typename T, std::size_t N>
-queue<T, N>::queue() {
-    front_ = 0;
-    back_ = 0;
-}
+queue<T, N>::queue(): front_{0}, back_{0} {}
 
 template<typename T, std::size_t N>
 void queue<T, N>::push(T data) {

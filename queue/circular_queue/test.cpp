@@ -9,17 +9,26 @@ int main() {
     catNameQueue.push("tobu");
     catNameQueue.push("happy");
     
-    catNameQueue.pop();
-    catNameQueue.pop();
-    catNameQueue.pop();
-    
-    if(!catNameQueue.empty()) {
-        std::cout<< catNameQueue.front() << std::endl;
-    }
 
-    catNameQueue.push("bombi");
-    catNameQueue.push("cheese");
-    catNameQueue.push("nabi");
-    catNameQueue.push("tobu");
+if(!catNameQueue.empty()) {
+    catNameQueue.pop();
+}
+if(!catNameQueue.empty()) {
+    catNameQueue.pop();
+}
+if(!catNameQueue.empty()) {
+    catNameQueue.pop();
+}
+if(!catNameQueue.empty()) {
+    catNameQueue.pop();
+}
 
+if(!catNameQueue.empty()) {
+    std::cout<< catNameQueue.front() << std::endl;
+}
+
+catNameQueue.push("bombi");
+catNameQueue.push("cheese");
+catNameQueue.push("nabi");
+catNameQueue.push("tobu");
 }
