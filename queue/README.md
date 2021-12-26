@@ -17,6 +17,6 @@ delete : O(1)
 - 가장 뒤에 있는 원소를 반환해주는 back()함수는 queue에 원소가 없을 때 호출되면 에러처리를 해줘야 한다.
 
 ### circular_queue
-empty : back_ == front_
-full : (back_+1)%N == front_
+- empty : back_ == front_
+- full : (back_+1)%N == front_
 할당 받은 모든 공간을 사용하면 empty와 full을 구분할 수 없게 된다.
